@@ -39,7 +39,7 @@ RUN go mod download
 # Copy the rest of the files and build the server
 COPY . .
 COPY --from=builder_node /code/_ui/build /code/_ui/build
-RUN make build
+RUN make build/server
 
 ############################
 # STEP 3 build a small image to run it all
